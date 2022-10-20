@@ -1,0 +1,9 @@
+[
+{
+    "model": "myblog.tag",
+    "pk": 2,
+    "fields": {
+        "name": "Games"
+    }
+}
+]

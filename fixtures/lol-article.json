@@ -1,0 +1,13 @@
+[
+{
+    "model": "myblog.article",
+    "pk": 2,
+    "fields": {
+        "title": "Support champion",
+        "content": "Within a drafted team, the Support is one of the two champions assigned to the bottom lane alongside the Bottom Bottom Carry. This role's initial goal is to assist their more vulnerable team mate through the earliest stages of the game, and is a position that suits champions with either utility, disengage or high base damage.",
+        "published": "2022-10-20T19:08:41.955Z",
+        "image": "",
+        "tags": []
+    }
+}
+]

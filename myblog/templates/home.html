@@ -1,0 +1,57 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+{% load static %}
+        
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{% static 'assets/img/home-bg.jpg' %}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            {% if tag %}
+                                <h1>Tag: {{ tag.name }}</h1>
+                            {% else %}
+                                <h1>Home</h1>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    {% for article in articles %}
+                        <div class="post-preview row">
+                            <div class="col-10">
+                                <div>
+                                    {% for tag in article.tags.all %}
+                                        &nbsp;|&nbsp;<a class="btn btn-dark" href="{% url 'home' %}?tag_id={{ tag.id }}"><span>{{ tag.name }}</span></a>
+                                    {% endfor %}
+                                </div>
+                                <br>
+                                <h2><a href="/articles/{{ article.id }}">
+                                    {{ article.title }}
+                                </a></h2>
+                                
+                                <p class="post-meta">
+                                    Posted on
+                                    {{ article.published }}
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                {% if article.image %}
+                                    <img class="img-thumbnail" src="{{ article.image.url }}">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+                        
+                    {% endfor %}
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "template.html" %}
+
+{% block content %}
+{% load static %}
+        <header class="masthead" style="background-image: url('{% static 'assets/img/home-bg.jpg' %}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            {% for tag in article.tags.all %}
+                                &nbsp;|&nbsp;<a class="btn btn-dark" href="{% url 'home' %}?tag_id={{ tag.id }}"><span>{{ tag.name }}</span></a>
+                            {% endfor %}
+                            <br>
+                            <h1>{{ article.title }}</h1>
+                            <br>
+                            <span class="meta">
+                                Posted on
+                                {{ article.published }}
+                            </span>
+                            <br>
+                            {% if user.is_superuser %}
+                            <a class="btn btn-primary" href="{% url 'edit' article.id %}">Edit article</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div style="margin-left: auto; margin-right: auto; width: 50%;">
+            {% if user.is_superuser %}
+                <form method="post", action="{% url 'tag_article' article.id %}">
+                {% csrf_token %}
+                    <h2>Add tag:</h2>
+                    <div>
+                        <label for="tags">Choose a tag:</label>
+                        <select name="tags" id="tags">
+                        {% for tag in tag_choices %}
+                            <option name="tag" value={{ tag.id }}>{{ tag.name }}</option><br>
+                        {% endfor %}
+                        </select>
+                    
+                    <input class="btn btn-dark" type="submit" value="Add Tag">
+                </div>
+                </form>
+            {% endif %}
+        </div>
+        <br>
+
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        {% if article.image %}
+                            <img class="img-fluid" src="{{ article.image.url }}">
+                        {% endif %}
+                        
+                        <p> {{ article.content }} </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        
+        
+
+        
+{% endblock %}

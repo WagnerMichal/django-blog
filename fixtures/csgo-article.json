@@ -1,0 +1,20 @@
+[
+{                         
+    "model": "myblog.tag",
+    "pk": 1,
+    "fields": {
+        "name": "CSGO"    
+    } 
+},                       
+{
+    "model": "myblog.article",
+    "pk": 1,
+    "fields": {
+        "title": "FaZe Clan",
+        "content": "The PGL Major Antwerp 2022, also known as PGL Major 2022 or Antwerp 2022, was the seventeenth Counter-Strike: Global Offensive (CS:GO) Major Championship.",
+        "published": "2022-10-20T19:01:30.343Z",
+        "image": "",
+        "tags": [1]
+    }
+}
+]

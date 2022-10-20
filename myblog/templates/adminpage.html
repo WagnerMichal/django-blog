@@ -1,0 +1,51 @@
+{% extends "template.html" %}
+{% block content %}
+
+{% load static %}
+
+<header class="masthead" style="background-image: url('{% static 'assets/img/home-bg.jpg' %}')">
+  <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="site-heading">
+                  <h1>Administration</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="my-5">
+              <form method="post" enctype="multipart/form-data", action="{% url 'create_article' %}">
+                {% csrf_token %}
+                <h2>New article</h2>
+                <div class="form-floating">
+                  <input class="form-control" id="title" placeholder="Enter title..." name="title" type="text" size="50" maxlength="100" required>
+                  <label for="title">Title</label>
+                </div>
+                <div class="form-floating">
+                  <textarea name="content" placeholder="Enter text..." rows="10" cols="61" required></textarea>
+                </div>
+
+                <div>
+                  <input class="form-control" type="file", name="upload", accept="image/*">
+                </div>
+
+                <input class="btn btn-dark" type="submit" value="Send" style='margin-top: 5px'>
+              </form>
+              <br>
+              <form method="post", action="{% url 'create_tag' %}">
+                {% csrf_token %}
+                <h2>Create new tag</h2>
+                <div class="form-floating">
+                <input class="form-control" id="Tag" placeholder="Enter Tag..." name="tag" type="text" size="50" maxlength ="15">
+                <label for="Tag">Tag</label>
+                </div>
+                <input class="btn btn-dark" type="submit" value="Send" style='margin-top: 5px'>
+              </form>
+              <br>
+              
+{% endblock %}

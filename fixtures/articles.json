@@ -1,0 +1,136 @@
+[
+{
+    "model": "myblog.tag",
+    "pk": 11,
+    "fields": {
+        "name": "Evropa"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 12,
+    "fields": {
+        "name": "Komedie"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 13,
+    "fields": {
+        "name": "Rusko"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 14,
+    "fields": {
+        "name": "History"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 15,
+    "fields": {
+        "name": "Olympics"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 16,
+    "fields": {
+        "name": "Jazz"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 17,
+    "fields": {
+        "name": "Movies"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 18,
+    "fields": {
+        "name": "Sport"
+    }
+},
+{
+    "model": "myblog.tag",
+    "pk": 19,
+    "fields": {
+        "name": "America"
+    }
+},
+{
+    "model": "myblog.article",
+    "pk": 7,
+    "fields": {
+        "title": "Rowing at the 1996 Summer Olympics Men's eight",
+        "content": "The men's eight competition at the 1996 Summer Olympics in Atlanta, Georgia took place at Lake Lanier. It was held from 21 to 27 July. There were 10 boats (90 competitors) from 10 nations, with each nation limited to a single boat in the event. The event was won by the Netherlands, the nation's first victory in the men's eight and first medal of any color in the event since 1900. Germany took silver; it was the 9th time in the past 10 Games that a German team (Germany, United Team of Germany, East Germany, or West Germany) was on the podium, with the only exception being 1984 when no German boats competed. Russia earned bronze in its independent debut.",
+        "published": "2022-10-20T19:26:01.349Z",
+        "image": "",
+        "tags": [
+            14,
+            15,
+            18
+        ]
+    }
+},
+{
+    "model": "myblog.article",
+    "pk": 8,
+    "fields": {
+        "title": "Studio Tan",
+        "content": "Studio Tan is the 24th album by American musician Frank Zappa, first released in September 1978 on his own DiscReet Records label. It reached #147 on the Billboard 200 albums chart in the United States",
+        "published": "2022-10-20T19:27:37.293Z",
+        "image": "",
+        "tags": [
+            19,
+            16
+        ]
+    }
+},
+{
+    "model": "myblog.article",
+    "pk": 9,
+    "fields": {
+        "title": "The Harper Hall Trilogy",
+        "content": "The Harper Hall trilogy is a series of three science fiction novels by the American-Irish author Anne McCaffrey. They are part of the Dragonriders of Pern series as it is known today, 26 books by Anne or her son Todd McCaffrey or daughter Gigi McCaffrey as of 2018. They were published by Atheneum Books in 1976, 1977, and 1979, alongside the Dragonriders of Pern series. Omnibus editions of the two trilogies were published by the Doubleday Science Fiction Book Club in 1978 and 1984, titled The Dragonriders of Pern and The Harper Hall of Pern respectively.",
+        "published": "2022-10-20T19:38:29.797Z",
+        "image": "",
+        "tags": [
+            14,
+            12
+        ]
+    }
+},
+{
+    "model": "myblog.article",
+    "pk": 10,
+    "fields": {
+        "title": "Billy Griggs",
+        "content": "Luther William Grigs (b. September 16, 1968 from Anaheim, California U.S.) is an American \"Old School/Mid School\" former professional Bicycle Motocross (BMX) racer whose prime competitive years were from 1985 to 1996.\r\n\r\nHis nickname was \"Mr. Bill\" which was a play on his name and an allusion to a late 1970s Saturday Night Live skit called \"The Mr. Bill Show.\" Billy Griggs had a more successful career than most, winning two World Championships during his amateur days, but did not quite make it to the top in pro although he would consistently make the mains.",
+        "published": "2022-10-20T19:39:48.631Z",
+        "image": "",
+        "tags": [
+            19,
+            14
+        ]
+    }
+},
+{
+    "model": "myblog.article",
+    "pk": 11,
+    "fields": {
+        "title": "Mary Ellen Pleasant",
+        "content": "Mary Ellen Pleasant (August 19, 1815 � January 11, 1904) was a 19th-century entrepreneur, financier, real estate magnate and abolitionist. She was arguably the first self-made millionaire of African-American heritage, preceding Madam C. J. Walker by decades.\r\n\r\nShe identified herself as \"a capitalist by profession\" in the 1890 United States census. Her aim was to earn as much money as she was able to help as many people as she could. With her riches she was able to provide transportation, housing, and food for survival. She trained people how to stay safe, succeed, carry themselves, and more. The \"one woman social agency\" served African Americans before and during the Civil War, as well as meeting a different set of needs after Emancipation.\r\n\r\nShe worked on the Underground Railroad and expanded it westward during the California Gold Rush era. She was a friend and financial supporter of John Brown and was well known among abolitionists. She helped women who lived in California during the California Gold Rush to stay safe and become self-sufficient. After the Civil War, she won several civil rights victories that resulted in her being called \"The Mother of Human Rights in California\". Legal battles, though, had mixed results.",
+        "published": "2022-10-20T19:41:26.960Z",
+        "image": "",
+        "tags": [
+            14,
+            19
+        ]
+    }
+}
+]
